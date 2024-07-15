@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../assets/black-logo.png";
+import logo from "../assets/page-logo.png";
 import Socials from "../components/Socials";
 
 const Header = () => {
@@ -24,10 +24,10 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="relative sticky top-0 z-50 bg-white border-b-[0.5px]">
+    <div className="sticky top-0 z-50 bg-white border-b-[0.5px]">
       <div className="flex flex-row w-full h-24 py-2 px-24">
-        <div className="flex flex-row w-1/2 justify-between space-x-14">
-          <img src={logo} alt="" className="w-auto h-full" />
+        <div className="flex flex-row w-1/2 justify-between items-center space-x-14">
+          <img src={logo} alt="" className="w-auto h-16" />
           <div className="flex flex-row w-full justify-between items-center poppins">
             <span className="text-black">Home</span>
             <span className="text-black">Services</span>
