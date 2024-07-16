@@ -2,13 +2,18 @@ import React from "react";
 import { CertificationProps } from "../interfaces/CertificationProps";
 
 const CertificationTag: React.FC<CertificationProps> = ({
+  icon,
   title,
   issuedBy,
   dateIssued,
 }) => {
   return (
     <div className="flex flex-row space-x-4 items-center">
-      <div className="h-14 w-14 rounded-2xl bg-white"></div>
+      <div className="h-14 w-14 rounded-2xl bg-white">
+        <span className="flex items-center justify-center text-black h-full w-full text-3xl">
+          {icon}
+        </span>
+      </div>
       <div className="flex flex-col space-y-1">
         <span className="text-black text-xl poppins">
           {title} issued by
