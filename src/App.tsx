@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import "./index.css";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ function AppContent() {
       <Routes>
         <Route path={"/"} element={<Home />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
