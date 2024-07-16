@@ -1,7 +1,7 @@
 import React from "react";
-import { WorkTagProps } from "../interfaces/WorkProps";
+import { WorkProps } from "../interfaces/WorkProps";
 
-const WorkTag: React.FC<WorkTagProps> = ({
+const WorkTag: React.FC<WorkProps> = ({
   position,
   company,
   startDate,

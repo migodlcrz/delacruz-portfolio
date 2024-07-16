@@ -1,4 +1,4 @@
-export interface WorkTagProps {
+export interface WorkProps {
   position: string;
   company: string;
   startDate: string;
