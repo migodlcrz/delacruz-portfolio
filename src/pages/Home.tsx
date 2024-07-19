@@ -23,7 +23,7 @@ const Home: React.FC<HomeProps> = ({
   return (
     <div ref={homeRef} className="flex flex-col">
       {/* Home */}
-      <div className="bg-white p-10 lg:py-24 lg:px-52">
+      <div className="bg-white p-8 lg:py-24 lg:px-52">
         <div className="flex flex-col items-start lg:items-start lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
           <div className="flex flex-row lg:flex-col items-center lg:items-start lg:w-1/2 space-x-4 lg:space-x-0 lg:space-y-10">
             <img
@@ -76,7 +76,7 @@ const Home: React.FC<HomeProps> = ({
       {/* About Me */}
       <div
         ref={aboutRef}
-        className="flex flex-col w-full bg-beige p-5 lg:py-24 lg:px-52 space-y-4 lg:space-y-10"
+        className="flex flex-col w-full bg-beige p-8 lg:py-24 lg:px-52 space-y-4 lg:space-y-10"
       >
         <div className="flex flex-col w-full bg-white rounded-3xl p-8 lg:p-20 space-y-6">
           <InfoTag
@@ -172,7 +172,7 @@ const Home: React.FC<HomeProps> = ({
       {/* Services */}
       <div
         ref={servicesRef}
-        className="flex flex-col w-full bg-white p-5 lg:py-24 lg:px-52 space-y-4"
+        className="flex flex-col w-full bg-white 10 p-8 lg:py-24 lg:px-52 space-y-4"
       >
         <div className="flex flex-row w-full space-y-4 items-center">
           <span className="text-black gideon text-xl lg:text-3xl w-full lg:w-1/2">
@@ -219,7 +219,7 @@ const Home: React.FC<HomeProps> = ({
       {/* Projects */}
       <div
         ref={projectsRef}
-        className="flex flex-col w-full bg-beige p-5 lg:py-24 lg:px-52 space-y-4 lg:space-y-10 lg:space-x-10"
+        className="flex flex-col w-full bg-beige p-8 lg:py-24 lg:px-52 space-y-4 lg:space-y-10 lg:space-x-10"
       >
         <div className="text-black text-xl lg:text-3xl gideon">
           Featured Works
