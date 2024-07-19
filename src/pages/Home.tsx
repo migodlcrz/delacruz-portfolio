@@ -47,12 +47,16 @@ const Home: React.FC<HomeProps> = ({
                   <IoCall />
                 </span>
               </button>
-              <button className="flex flex-row items-center space-x-4 border-[0.5px] border-black py-2 px-5 rounded-full poppins text-white bg-black">
+              <a
+                href="/resume.pdf"
+                download="Lorenzo_Dela_Cruz_Resume.pdf"
+                className="flex flex-row items-center space-x-4 border-[0.5px] border-black py-2 px-5 rounded-full poppins text-white bg-black"
+              >
                 <span>Download Resume</span>
                 <span>
                   <MdDownload />
                 </span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
