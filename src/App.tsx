@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import "./index.css";
 import Footer from "./components/Footer";
 import { useRef } from "react";
+import ContactModal from "./components/ContactModal";
 
 const App = () => {
   const homeRef = useRef<HTMLDivElement>(null);
@@ -38,6 +39,7 @@ const AppContent: React.FC<AppContentProps> = ({
 }) => {
   return (
     <div>
+      <ContactModal />
       <Header
         homeRef={homeRef}
         aboutRef={aboutRef}

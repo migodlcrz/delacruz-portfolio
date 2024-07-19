@@ -1,6 +1,8 @@
 import { RefObject } from "react";
 import profile from "../assets/profile.jpg";
 import { FooterProps } from "../interfaces/ReferenceProps";
+import { IoCall } from "react-icons/io5";
+import ContactModal from "./ContactModal";
 
 const Footer: React.FC<FooterProps> = ({
   homeRef,
@@ -33,8 +35,19 @@ const Footer: React.FC<FooterProps> = ({
             Let's talk with me
           </span>
         </div>
-        <button className="bg-beige px-5 py-2 rounded-full">
-          <span className="text-black poppins">Contact Me</span>
+        <button
+          onClick={() => {
+            const dialog = document.getElementById(
+              "contact_modal"
+            ) as HTMLDialogElement;
+            dialog.showModal();
+          }}
+          className="flex flex-row items-center space-x-2 border-[0.5px] border-gray-400 bg-white hover:bg-gray-200 transition-colors duration-300 py-2 px-5 text-xs lg:text-base rounded-full poppins text-black"
+        >
+          <span>Contact Me</span>
+          <span>
+            <IoCall />
+          </span>
         </button>
       </div>
       <div className="flex flex-col lg:flex-row w-full px-18 justify-between space-y-4 lg:space-y-0">

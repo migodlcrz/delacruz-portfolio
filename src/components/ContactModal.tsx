@@ -9,8 +9,8 @@ import { MdEmail } from "react-icons/md";
 
 const ContactModal = () => {
   return (
-    <dialog id="contact_modal" className="modal">
-      <div className="flex flex-col items-center justify-center p-4 bg-beige rounded-3xl">
+    <dialog id="contact_modal" className="modal w-full px-2">
+      <div className="flex flex-col items-center justify-center p-4 bg-beige rounded-3xl\">
         <span className="flex w-full justify-end">
           <form method="dialog">
             <button className="text-black text-3xl cursor-pointer hover:text-gray-500 transition-colors duration-300">
@@ -19,21 +19,23 @@ const ContactModal = () => {
           </form>
         </span>
         <div className="flex flex-col items-center justify-center space-y-6 w-full px-10 pb-10">
-          <span className="text-black text-3xl gideon">Contact Me</span>
+          <span className="text-black text-xl lg:text-3xl gideon">
+            Contact Me
+          </span>
           <div className="flex flex-col w-full space-y-1 justify-start text-gray-700">
-            <span className="flex flex-row space-x-2 items-center">
+            <span className="flex flex-row space-x-2 items-center text-sm lg:text-base">
               <div>
                 <IoCall />
               </div>
               <div>+639934116567/9664580566</div>
             </span>
-            <span className="flex flex-row space-x-2 items-center">
+            <span className="flex flex-row space-x-2 items-center text-sm lg:text-base">
               <div>
                 <MdEmail />
               </div>
               <div>lorenzo.cap.delacruz@gmail.com</div>
             </span>
-            <span className="flex flex-row space-x-2 items-center">
+            <span className="flex flex-row space-x-2 items-center text-sm lg:text-base">
               <div>
                 <FaLocationDot />
               </div>
@@ -42,19 +44,19 @@ const ContactModal = () => {
           </div>
           <div className="border-b-[0.5px] border-gray-300" />
           <div className="flex flex-col w-full space-y-1 justify-center text-gray-700">
-            <span className="flex flex-row space-x-2 items-center">
+            <span className="flex flex-row space-x-2 items-center text-sm lg:text-base">
               <div>
                 <FaGithub />
               </div>
               <div>github.com/migodlcrz</div>
             </span>
-            <span className="flex flex-row space-x-2 items-center">
+            <span className="flex flex-row space-x-2 items-center text-sm lg:text-base">
               <div>
                 <FaLinkedin />
               </div>
               <div>linkedin.com/in/lorenzo-miguel-dela-cruz</div>
             </span>
-            <span className="flex flex-row space-x-2 items-center">
+            <span className="flex flex-row space-x-2 items-center text-sm lg:text-base">
               <div>
                 <FaFacebook />
               </div>

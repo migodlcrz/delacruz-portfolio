@@ -7,11 +7,10 @@ import { TbApi } from "react-icons/tb";
 import profile from "../assets/profile.jpg";
 import CertificationTag from "../components/CertificationTag";
 import EducationTag from "../components/EducationTag";
+import InfoTag from "../components/InfoTag";
 import ServiceTag from "../components/ServiceTag";
 import WorkTag from "../components/WorkTag";
-import InfoTag from "../components/InfoTag";
 import { HomeProps } from "../interfaces/ReferenceProps";
-import ContactModal from "../components/ContactModal";
 
 const Home: React.FC<HomeProps> = ({
   homeRef,
@@ -58,7 +57,6 @@ const Home: React.FC<HomeProps> = ({
                   <IoCall />
                 </span>
               </button>
-              <ContactModal />
               <a
                 href="/resume.pdf"
                 download="Lorenzo_Dela_Cruz_Resume.pdf"
@@ -181,6 +179,15 @@ const Home: React.FC<HomeProps> = ({
         </div>
         <div className="flex flex-col w-full space-y-10">
           <ServiceTag
+            icon={<FaCloud />}
+            title="Cloud Engineering"
+            description="From deploying applications to managing cloud infrastructure, I
+              can help you leverage cloud services for maximum performance and
+              reliability."
+            tools="Amazon Web Services (AWS), API Gateway, Lambda, S3 Bucket, Cloudfront"
+          />
+          <div className="border-b-[0.5px] border-gray-300" />
+          <ServiceTag
             icon={<TbApi />}
             title="Creating API's"
             description="Whether you need RESTful or GraphQL APIs, I can design and
@@ -195,15 +202,6 @@ const Home: React.FC<HomeProps> = ({
             title="Database Ecosystem"
             description="I have experience working with various NoSQL databases, ensuring your data is stored efficiently and can be accessed quickly."
             tools="MongoDB, Mongoose"
-          />
-          <div className="border-b-[0.5px] border-gray-300" />
-          <ServiceTag
-            icon={<FaCloud />}
-            title="Cloud Engineering"
-            description="From deploying applications to managing cloud infrastructure, I
-              can help you leverage cloud services for maximum performance and
-              reliability."
-            tools="Amazon Web Services (AWS), API Gateway, Lambda, S3 Bucket, Cloudfront"
           />
           <div className="border-b-[0.5px] border-gray-300" />
           <ServiceTag
