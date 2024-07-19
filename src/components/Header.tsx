@@ -1,8 +1,8 @@
-import { useState, useEffect, RefObject } from "react";
+import { RefObject, useEffect, useState } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
 import logo from "../assets/page-logo.png";
 import Socials from "../components/Socials";
 import { HeaderProps } from "../interfaces/ReferenceProps";
-import { RxHamburgerMenu } from "react-icons/rx";
 import SocialsMobile from "./SocialsMobile";
 
 const Header: React.FC<HeaderProps> = ({

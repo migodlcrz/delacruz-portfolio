@@ -1,18 +1,18 @@
+import Lottie from "lottie-react";
 import { CgWebsite } from "react-icons/cg";
 import { FaCloud, FaDatabase, FaJava, FaPython } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
 import { MdDownload } from "react-icons/md";
 import { SiCisco } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
-import profile from "../assets/profile.jpg";
+import profile from "../assets/profile-cool.jpg";
+import wip from "../assets/wip.json";
 import CertificationTag from "../components/CertificationTag";
 import EducationTag from "../components/EducationTag";
 import InfoTag from "../components/InfoTag";
 import ServiceTag from "../components/ServiceTag";
 import WorkTag from "../components/WorkTag";
 import { HomeProps } from "../interfaces/ReferenceProps";
-import Lottie from "lottie-react";
-import wip from "../assets/wip.json";
 
 const Home: React.FC<HomeProps> = ({
   homeRef,
@@ -29,7 +29,7 @@ const Home: React.FC<HomeProps> = ({
             <img
               src={profile}
               alt=""
-              className="h-10 w-10 lg:h-44 lg:w-44 rounded-3xl"
+              className="h-10 w-10 lg:h-44 lg:w-44 rounded-3xl object-cover"
             />
             <span className="text-black poppins text-base lg:text-6xl">
               Hello! I'm Lorenzo Miguel <br className="hidden lg:block" />
