@@ -11,6 +11,7 @@ import ServiceTag from "../components/ServiceTag";
 import WorkTag from "../components/WorkTag";
 import InfoTag from "../components/InfoProps";
 import { HomeProps } from "../interfaces/ReferenceProps";
+import ContactModal from "../components/ContactModal";
 
 const Home: React.FC<HomeProps> = ({
   homeRef,
@@ -41,16 +42,25 @@ const Home: React.FC<HomeProps> = ({
               engineering, and related technologies.
             </span>
             <div className="flex flex-row space-x-2 items-end justify-start">
-              <button className="flex flex-row items-center space-x-4 border-[0.5px] border-gray-400 py-2 px-5 rounded-full poppins text-black">
+              <button
+                onClick={() => {
+                  const dialog = document.getElementById(
+                    "contact_modal"
+                  ) as HTMLDialogElement;
+                  dialog.showModal();
+                }}
+                className="flex flex-row items-center space-x-4 border-[0.5px] border-gray-400 bg-white hover:bg-gray-200 transition-colors duration-300 py-2 px-5 rounded-full poppins text-black"
+              >
                 <span>Contact Me</span>
                 <span>
                   <IoCall />
                 </span>
               </button>
+              <ContactModal />
               <a
                 href="/resume.pdf"
                 download="Lorenzo_Dela_Cruz_Resume.pdf"
-                className="flex flex-row items-center space-x-4 border-[0.5px] border-black py-2 px-5 rounded-full poppins text-white bg-black"
+                className="flex flex-row items-center space-x-4 border-[0.5px] border-black py-2 px-5 rounded-full poppins text-white bg-black hover:bg-gray-700 transition-colors duration-300"
               >
                 <span>Download Resume</span>
                 <span>
