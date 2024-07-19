@@ -1,8 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, RefObject } from "react";
 import logo from "../assets/page-logo.png";
 import Socials from "../components/Socials";
+import { HeaderProps } from "../interfaces/ReferenceProps";
 
-const Header = () => {
+const Header: React.FC<HeaderProps> = ({
+  homeRef,
+  aboutRef,
+  servicesRef,
+  projectsRef,
+}) => {
   const [time, setTime] = useState("");
 
   const getManilaTime = () => {
@@ -17,6 +23,10 @@ const Header = () => {
     setTime(manilaTime);
   };
 
+  const handleScroll = (ref: RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
     getManilaTime();
     const intervalId = setInterval(getManilaTime, 1000);
@@ -29,10 +39,30 @@ const Header = () => {
         <div className="flex flex-row w-1/2 justify-between items-center space-x-14">
           <img src={logo} alt="" className="w-auto h-16" />
           <div className="flex flex-row w-full justify-between items-center poppins">
-            <span className="text-black">Home</span>
-            <span className="text-black">Services</span>
-            <span className="text-black">About Me</span>
-            <span className="text-black">Projects</span>
+            <button
+              onClick={() => handleScroll(homeRef)}
+              className="text-black hover:text-gray-400 transition-colors duration-300"
+            >
+              Home
+            </button>
+            <button
+              onClick={() => handleScroll(aboutRef)}
+              className="text-black hover:text-gray-400 transition-colors duration-300"
+            >
+              About Me
+            </button>
+            <button
+              onClick={() => handleScroll(servicesRef)}
+              className="text-black hover:text-gray-400 transition-colors duration-300"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => handleScroll(projectsRef)}
+              className="text-black hover:text-gray-400 transition-colors duration-300"
+            >
+              Projects
+            </button>
           </div>
         </div>
         <div className="flex flex-row w-1/2 justify-end items-center space-x-10">
