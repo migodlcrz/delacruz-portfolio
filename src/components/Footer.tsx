@@ -1,5 +1,29 @@
+import { RefObject } from "react";
 import profile from "../assets/profile.jpg";
-const Footer = () => {
+import { FooterProps } from "../interfaces/ReferenceProps";
+
+const Footer: React.FC<FooterProps> = ({
+  homeRef,
+  aboutRef,
+  servicesRef,
+  projectsRef,
+}) => {
+  const handleScroll = (
+    ref: RefObject<HTMLDivElement>,
+    offset: number = 96
+  ) => {
+    if (ref.current) {
+      const elementPosition =
+        ref.current.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="flex flex-col w-full h-96 bg-black px-40 py-5">
       <div className="flex flex-col w-full h-full text-center items-center justify-center space-y-12">
@@ -22,25 +46,32 @@ const Footer = () => {
           <span className="text-beige poppins">Software Engineer</span>
         </div>
         <div className="flex flex-row justify-between space-x-36">
-          <span className="text-beige poppins">Home</span>
-          <span className="text-beige poppins">About Me</span>
-          <span className="text-beige poppins">Services</span>
-          <span className="text-beige poppins">Projects</span>
+          <button
+            onClick={() => handleScroll(homeRef)}
+            className="text-beige poppins"
+          >
+            Home
+          </button>
+          <button
+            onClick={() => handleScroll(aboutRef)}
+            className="text-beige poppins"
+          >
+            About Me
+          </button>
+          <button
+            onClick={() => handleScroll(servicesRef)}
+            className="text-beige poppins"
+          >
+            Services
+          </button>
+          <button
+            onClick={() => handleScroll(projectsRef)}
+            className="text-beige poppins"
+          >
+            Projects
+          </button>
         </div>
       </div>
-      {/* <div className="flex flex-row space-x-5">
-        <img src={profile} alt="" className="rounded-2xl" />
-        <div className="flex flex-col">
-          <span className="text-beige text-2xl gideon">
-            I'm Lorenzo Miguel Dela Cruz
-          </span>
-          <span className="text-beige text-base poppins">
-            An aspiring Software Engineer based
-            <br /> in Manila, Philippines
-          </span>
-        </div>
-        <div className="flex flex-row"></div>
-      </div> */}
     </div>
   );
 };
