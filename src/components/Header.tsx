@@ -3,6 +3,7 @@ import logo from "../assets/page-logo.png";
 import Socials from "../components/Socials";
 import { HeaderProps } from "../interfaces/ReferenceProps";
 import { RxHamburgerMenu } from "react-icons/rx";
+import SocialsMobile from "./SocialsMobile";
 
 const Header: React.FC<HeaderProps> = ({
   homeRef,
@@ -48,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <div className="sticky top-0 z-50 bg-white border-b-[0.5px]">
-      <div className="flex flex-row w-full h-24 p-4 lg:py-2 lg:px-24">
+      <div className="flex flex-row w-full h-16 lg:h-24 p-4 lg:py-2 lg:px-24">
         <div className="flex flex-row w-1/2 justify-between items-center space-x-14">
           <img src={logo} alt="" className="w-auto h-8 lg:h-16" />
           <div className=" hidden lg:flex lg:flex-row w-full justify-between items-center poppins">
@@ -91,14 +92,35 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             <ul
               tabIndex={0}
-              className="dropdown-content menu bg-white z-[1] w-96 p-2 shadow border-[0.5px] border-gray-500"
+              className="dropdown-content menu bg-white z-[1] shadow-lg border-gray-500 w-52 p-4"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Item 2</a>
-              </li>
+              <div className="flex flex-col lg:hidden w-full justify-between items-start poppins space-y-6">
+                <button
+                  onClick={() => handleScroll(homeRef)}
+                  className="text-black hover:text-gray-400 transition-colors duration-300"
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => handleScroll(aboutRef)}
+                  className="text-black hover:text-gray-400 transition-colors duration-300"
+                >
+                  About Me
+                </button>
+                <button
+                  onClick={() => handleScroll(servicesRef)}
+                  className="text-black hover:text-gray-400 transition-colors duration-300"
+                >
+                  Services
+                </button>
+                <button
+                  onClick={() => handleScroll(projectsRef)}
+                  className="text-black hover:text-gray-400 transition-colors duration-300"
+                >
+                  Projects
+                </button>
+              </div>
+              <SocialsMobile />
             </ul>
           </div>
         </div>

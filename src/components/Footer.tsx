@@ -37,7 +37,7 @@ const Footer: React.FC<FooterProps> = ({
           <span className="text-black poppins">Contact Me</span>
         </button>
       </div>
-      <div className="flex flex-col lg:flex-row w-full px-18 justify-between space-y-2">
+      <div className="flex flex-col lg:flex-row w-full px-18 justify-between space-y-4 lg:space-y-0">
         <div className="flex flex-row space-x-10 items-center justify-center">
           <div className="flex flex-row space-x-3 items-center justify-center">
             <img src={profile} alt="" className="h-8 w-8 rounded-xl" />
@@ -45,7 +45,7 @@ const Footer: React.FC<FooterProps> = ({
           </div>
           <span className="text-beige poppins">Software Engineer</span>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-x-36">
+        <div className="hidden lg:flex flex-row justify-between lg:space-x-36">
           <button
             onClick={() => handleScroll(homeRef)}
             className="text-beige poppins"
@@ -70,6 +70,36 @@ const Footer: React.FC<FooterProps> = ({
           >
             Projects
           </button>
+        </div>
+        <div className="lg:hidden flex flex-row justify-between lg:space-x-36">
+          <div className="flex flex-col w-1/2 space-y-4">
+            <button
+              onClick={() => handleScroll(homeRef)}
+              className="text-beige poppins"
+            >
+              Home
+            </button>
+            <button
+              onClick={() => handleScroll(aboutRef)}
+              className="text-beige poppins"
+            >
+              About Me
+            </button>
+          </div>
+          <div className="flex flex-col w-1/2 space-y-4">
+            <button
+              onClick={() => handleScroll(servicesRef)}
+              className="text-beige poppins"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => handleScroll(projectsRef)}
+              className="text-beige poppins"
+            >
+              Projects
+            </button>
+          </div>
         </div>
       </div>
     </div>
