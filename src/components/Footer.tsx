@@ -23,8 +23,8 @@ const Footer = () => {
         </div>
         <div className="flex flex-row justify-between space-x-36">
           <span className="text-beige poppins">Home</span>
-          <span className="text-beige poppins">Services</span>
           <span className="text-beige poppins">About Me</span>
+          <span className="text-beige poppins">Services</span>
           <span className="text-beige poppins">Projects</span>
         </div>
       </div>
