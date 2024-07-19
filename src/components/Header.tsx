@@ -81,8 +81,8 @@ const Header: React.FC<HeaderProps> = ({
         </div>
         <div className="hidden lg:flex flex-row w-1/2 justify-end items-center space-x-10">
           <div className="flex flex-col">
-            <span className="text-gray-700">Manila, Philippines</span>
-            <span className="text-black font-bold">{time}</span>
+            <span className="text-gray-700 font-bold">Manila, Philippines</span>
+            <span className="text-black">{time}</span>
           </div>
         </div>
         <div className="flex w-1/2 justify-end items-center lg:hidden">
@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             <ul
               tabIndex={0}
-              className="dropdown-content menu bg-white z-[1] shadow-lg border-gray-500 w-52 p-4"
+              className="dropdown-content menu flex flex-col bg-white z-[1] shadow-lg border-gray-500 w-52 p-4"
             >
               <div className="flex flex-col lg:hidden w-full justify-between items-start poppins space-y-6">
                 <button
@@ -121,6 +121,12 @@ const Header: React.FC<HeaderProps> = ({
                 </button>
               </div>
               <SocialsMobile />
+              <div className="flex flex-col w-full pt-4 justify-center">
+                <span className="text-gray-700 font-bold">
+                  Manila, Philippines
+                </span>
+                <span className="text-black">{time}</span>
+              </div>
             </ul>
           </div>
         </div>
