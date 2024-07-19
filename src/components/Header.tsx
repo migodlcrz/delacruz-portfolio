@@ -23,8 +23,20 @@ const Header: React.FC<HeaderProps> = ({
     setTime(manilaTime);
   };
 
-  const handleScroll = (ref: RefObject<HTMLDivElement>) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+  const handleScroll = (
+    ref: RefObject<HTMLDivElement>,
+    offset: number = 96
+  ) => {
+    if (ref.current) {
+      const elementPosition =
+        ref.current.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
   useEffect(() => {
