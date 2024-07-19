@@ -10,7 +10,7 @@ import { MdEmail } from "react-icons/md";
 const ContactModal = () => {
   return (
     <dialog id="contact_modal" className="modal">
-      <div className="flex flex-col items-center justify-center p-2 bg-beige rounded-3xl">
+      <div className="flex flex-col items-center justify-center p-4 bg-beige rounded-3xl">
         <span className="flex w-full justify-end">
           <form method="dialog">
             <button className="text-black text-3xl cursor-pointer hover:text-gray-500 transition-colors duration-300">
