@@ -23,7 +23,7 @@ const Home: React.FC<HomeProps> = ({
     <div ref={homeRef} className="flex flex-col">
       {/* Home */}
       <div className="bg-white p-10 lg:py-24 lg:px-52">
-        <div className="flex flex-col items-start lg:items-start lg:flex-row lg:space-x-4">
+        <div className="flex flex-col items-start lg:items-start lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
           <div className="flex flex-row lg:flex-col items-center lg:items-start lg:w-1/2 space-x-4 lg:space-x-0 lg:space-y-10">
             <img
               src={profile}
