@@ -25,11 +25,11 @@ const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <div className="flex flex-col w-full h-96 bg-black px-40 py-5">
-      <div className="flex flex-col w-full h-full text-center items-center justify-center space-y-12">
+    <div className="flex flex-col w-full h-96 bg-black p-5 lg:px-40 lg:py-5">
+      <div className="flex flex-col w-full h-full text-center items-center justify-center space-y-4 lg:space-y-12">
         <div className="flex flex-col space-y-4">
           <span className="text-beige text-xl gideon">Have an idea?</span>
-          <span className="text-beige text-5xl poppins-bold">
+          <span className="text-beige lg:text-5xl poppins-bold">
             Let's talk with me
           </span>
         </div>
@@ -37,7 +37,7 @@ const Footer: React.FC<FooterProps> = ({
           <span className="text-black poppins">Contact Me</span>
         </button>
       </div>
-      <div className="flex flex-row w-full px-18 justify-between">
+      <div className="flex flex-col lg:flex-row w-full px-18 justify-between space-y-2">
         <div className="flex flex-row space-x-10 items-center justify-center">
           <div className="flex flex-row space-x-3 items-center justify-center">
             <img src={profile} alt="" className="h-8 w-8 rounded-xl" />
@@ -45,7 +45,7 @@ const Footer: React.FC<FooterProps> = ({
           </div>
           <span className="text-beige poppins">Software Engineer</span>
         </div>
-        <div className="flex flex-row justify-between space-x-36">
+        <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-x-36">
           <button
             onClick={() => handleScroll(homeRef)}
             className="text-beige poppins"

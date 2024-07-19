@@ -2,7 +2,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Socials = () => {
   return (
-    <div className="absolute top-38 right-4 flex flex-col space-y-2 pt-4">
+    <div className="hidden lg:flex flex-col absolute top-38 right-4 space-y-2 pt-4">
       <a
         href="https://github.com/migodlcrz"
         target="_blank"

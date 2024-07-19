@@ -2,6 +2,7 @@ import { useState, useEffect, RefObject } from "react";
 import logo from "../assets/page-logo.png";
 import Socials from "../components/Socials";
 import { HeaderProps } from "../interfaces/ReferenceProps";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header: React.FC<HeaderProps> = ({
   homeRef,
@@ -47,10 +48,10 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <div className="sticky top-0 z-50 bg-white border-b-[0.5px]">
-      <div className="flex flex-row w-full h-24 py-2 px-24">
+      <div className="flex flex-row w-full h-24 p-4 lg:py-2 lg:px-24">
         <div className="flex flex-row w-1/2 justify-between items-center space-x-14">
-          <img src={logo} alt="" className="w-auto h-16" />
-          <div className="flex flex-row w-full justify-between items-center poppins">
+          <img src={logo} alt="" className="w-auto h-8 lg:h-16" />
+          <div className=" hidden lg:flex lg:flex-row w-full justify-between items-center poppins">
             <button
               onClick={() => handleScroll(homeRef)}
               className="text-black hover:text-gray-400 transition-colors duration-300"
@@ -77,10 +78,28 @@ const Header: React.FC<HeaderProps> = ({
             </button>
           </div>
         </div>
-        <div className="flex flex-row w-1/2 justify-end items-center space-x-10">
+        <div className="hidden lg:flex flex-row w-1/2 justify-end items-center space-x-10">
           <div className="flex flex-col">
             <span className="text-gray-700">Manila, Philippines</span>
             <span className="text-black font-bold">{time}</span>
+          </div>
+        </div>
+        <div className="flex w-1/2 justify-end items-center lg:hidden">
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="text-black">
+              <RxHamburgerMenu />
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu bg-white z-[1] w-96 p-2 shadow border-[0.5px] border-gray-500"
+            >
+              <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Item 2</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ import CertificationTag from "../components/CertificationTag";
 import EducationTag from "../components/EducationTag";
 import ServiceTag from "../components/ServiceTag";
 import WorkTag from "../components/WorkTag";
-import InfoTag from "../components/InfoProps";
+import InfoTag from "../components/InfoTag";
 import { HomeProps } from "../interfaces/ReferenceProps";
 import ContactModal from "../components/ContactModal";
 
@@ -22,26 +22,28 @@ const Home: React.FC<HomeProps> = ({
   return (
     <div ref={homeRef} className="flex flex-col">
       {/* Home */}
-      <div className="flex flex-col bg-white lg:py-24 lg:px-52">
-        <div className="flex flex-row space-x-4">
-          <div className="flex flex-col w-1/2 space-y-2">
-            <div className="flex flex-col space-y-10">
-              <img src={profile} alt="" className="h-44 w-44 rounded-3xl" />
-              <span className="text-black poppins lg:text-6xl">
-                Hello! I'm Lorenzo Miguel <br />
-                Dela Cruz
-              </span>
-            </div>
+      <div className="bg-white p-10 lg:py-24 lg:px-52">
+        <div className="flex flex-col items-start lg:items-start lg:flex-row lg:space-x-4">
+          <div className="flex flex-row lg:flex-col items-center lg:items-start lg:w-1/2 space-x-4 lg:space-y-10">
+            <img
+              src={profile}
+              alt=""
+              className="h-10 w-10 lg:h-44 lg:w-44 rounded-3xl"
+            />
+            <span className="text-black poppins lg:text-6xl">
+              Hello! I'm Lorenzo Miguel <br />
+              Dela Cruz
+            </span>
           </div>
-          <div className="flex flex-col w-1/2 space-y-6 space text-start">
-            <span className="text-black gideon text-6xl">
+          <div className="flex flex-col lg:w-1/2 space-y-6 space text-start">
+            <span className="text-black gideon text-3xl lg:text-6xl">
               An aspiring Software Engineer based in Manila, Philippines
             </span>
-            <span className="text-gray-600 poppins text-xl">
+            <span className="text-gray-600 poppins text-base lg:text-xl">
               Passionate about creating robust backend systems, APIs, cloud
               engineering, and related technologies.
             </span>
-            <div className="flex flex-row space-x-2 items-end justify-start">
+            <div className="flex flex-row space-x-2 items-center lg:items-end justify-start">
               <button
                 onClick={() => {
                   const dialog = document.getElementById(
@@ -49,7 +51,7 @@ const Home: React.FC<HomeProps> = ({
                   ) as HTMLDialogElement;
                   dialog.showModal();
                 }}
-                className="flex flex-row items-center space-x-4 border-[0.5px] border-gray-400 bg-white hover:bg-gray-200 transition-colors duration-300 py-2 px-5 rounded-full poppins text-black"
+                className="flex flex-row items-center space-x-4 border-[0.5px] border-gray-400 bg-white hover:bg-gray-200 transition-colors duration-300 py-2 px-5 text-xs lg:text-base rounded-full poppins text-black"
               >
                 <span>Contact Me</span>
                 <span>
@@ -60,7 +62,7 @@ const Home: React.FC<HomeProps> = ({
               <a
                 href="/resume.pdf"
                 download="Lorenzo_Dela_Cruz_Resume.pdf"
-                className="flex flex-row items-center space-x-4 border-[0.5px] border-black py-2 px-5 rounded-full poppins text-white bg-black hover:bg-gray-700 transition-colors duration-300"
+                className="flex flex-row items-center space-x-4 border-[0.5px] border-black py-2 px-5 rounded-full poppins text-white bg-black hover:bg-gray-700 text-xs lg:text-base transition-colors duration-300"
               >
                 <span>Download Resume</span>
                 <span>
@@ -70,14 +72,13 @@ const Home: React.FC<HomeProps> = ({
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-full"></div>
       </div>
       {/* About Me */}
       <div
         ref={aboutRef}
-        className="flex flex-col w-full bg-beige py-24 px-52 space-y-10"
+        className="flex flex-col w-full bg-beige p-5 lg:py-24 lg:px-52 space-y-4 lg:space-y-10"
       >
-        <div className="flex flex-col w-full bg-white rounded-3xl p-20 space-y-6">
+        <div className="flex flex-col w-full bg-white rounded-3xl p-8 lg:p-20 space-y-6">
           <InfoTag
             title="About Me"
             text="Hello! I'm Lorenzo Dela Cruz, an aspiring Software Engineer based
@@ -102,16 +103,20 @@ const Home: React.FC<HomeProps> = ({
               build impactful software solutions."
           />
         </div>
-        <div className="flex flex-row w-full space-x-10">
-          <div className="flex flex-col w-1/2 space-y-4">
-            <span className="text-black gideon text-3xl">Work Experiences</span>
+        <div className="flex flex-col lg:flex-row w-full space-y-4 lg:space-x-10">
+          <div className="flex flex-col w-full lg:w-1/2 space-y-4">
+            <span className="text-black gideon text-xl lg:text-3xl">
+              Work Experiences
+            </span>
             <WorkTag
               position={"IT Intern"}
               company={"GlobalTek BPO, Inc."}
               startDate={"December 2023"}
               endDate={"July 2024"}
             />
-            <span className="text-black gideon text-3xl">Education</span>
+            <span className="text-black gideon text-xl lg:text-3xl">
+              Education
+            </span>
             <EducationTag
               school={"Far Eastern University Institute of Technology"}
               course={
@@ -128,8 +133,10 @@ const Home: React.FC<HomeProps> = ({
               endDate={"March 2020"}
             />
           </div>
-          <div className="flex flex-col w-1/2 space-y-4">
-            <span className="text-black gideon text-3xl">Certifications</span>
+          <div className="flex flex-col w-full lg:w-1/2 space-y-4">
+            <span className="text-black gideon text-xl lg:text-3xl">
+              Certifications
+            </span>
             <div className="flex flex-col space-y-8">
               <CertificationTag
                 icon={<FaJava />}
@@ -165,10 +172,10 @@ const Home: React.FC<HomeProps> = ({
       {/* Services */}
       <div
         ref={servicesRef}
-        className="flex flex-col w-full bg-white py-24 px-52 space-y-4"
+        className="flex flex-col w-full bg-white p-5 lg:py-24 lg:px-52 space-y-4"
       >
         <div className="flex flex-row w-full space-y-4 items-center">
-          <span className="text-black gideon text-3xl w-1/2">
+          <span className="text-black gideon text-xl lg:text-3xl w-full lg:w-1/2">
             I can help you with
           </span>
         </div>
@@ -212,9 +219,11 @@ const Home: React.FC<HomeProps> = ({
       {/* Projects */}
       <div
         ref={projectsRef}
-        className="flex flex-row w-full bg-beige py-24 px-52 space-x-10"
+        className="flex flex-row w-full bg-beige p-5 lg:py-24 lg:px-52 lg:space-x-10"
       >
-        <div className="text-black text-3xl gideon">Featured Works</div>
+        <div className="text-black text-xl lg:text-3xl gideon">
+          Featured Works
+        </div>
       </div>
     </div>
   );
