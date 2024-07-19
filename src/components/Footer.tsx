@@ -1,8 +1,7 @@
 import { RefObject } from "react";
+import { IoCall } from "react-icons/io5";
 import profile from "../assets/profile.jpg";
 import { FooterProps } from "../interfaces/ReferenceProps";
-import { IoCall } from "react-icons/io5";
-import ContactModal from "./ContactModal";
 
 const Footer: React.FC<FooterProps> = ({
   homeRef,
