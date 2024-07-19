@@ -57,7 +57,12 @@ const AppContent: React.FC<AppContentProps> = ({
           }
         />
       </Routes>
-      <Footer />
+      <Footer
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        servicesRef={servicesRef}
+        projectsRef={projectsRef}
+      />
     </div>
   );
 };
