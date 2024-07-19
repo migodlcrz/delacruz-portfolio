@@ -30,8 +30,8 @@ const Home: React.FC<HomeProps> = ({
               alt=""
               className="h-10 w-10 lg:h-44 lg:w-44 rounded-3xl"
             />
-            <span className="text-black poppins lg:text-6xl">
-              Hello! I'm Lorenzo Miguel <br />
+            <span className="text-black poppins text-base lg:text-6xl">
+              Hello! I'm Lorenzo Miguel <br className="hidden lg:block" />
               Dela Cruz
             </span>
           </div>
