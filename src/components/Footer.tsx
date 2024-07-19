@@ -28,9 +28,11 @@ const Footer: React.FC<FooterProps> = ({
   return (
     <div className="flex flex-col w-full h-96 bg-black p-5 lg:px-40 lg:py-5">
       <div className="flex flex-col w-full h-full text-center items-center justify-center space-y-4 lg:space-y-12">
-        <div className="flex flex-col space-y-4">
-          <span className="text-beige text-xl gideon">Have an idea?</span>
-          <span className="text-beige lg:text-5xl poppins-bold">
+        <div className="flex flex-col space-y-2">
+          <span className="text-beige text-base lg:text-xl gideon">
+            Have an idea?
+          </span>
+          <span className="text-beige text-xl lg:text-5xl poppins-bold">
             Let's talk with me
           </span>
         </div>
@@ -83,7 +85,7 @@ const Footer: React.FC<FooterProps> = ({
             Projects
           </button>
         </div>
-        <div className="lg:hidden flex flex-row justify-between lg:space-x-36">
+        <div className="lg:hidden flex flex-row justify-between p-10">
           <div className="flex flex-col w-1/2 space-y-4">
             <button
               onClick={() => handleScroll(homeRef)}
