@@ -11,6 +11,8 @@ import InfoTag from "../components/InfoTag";
 import ServiceTag from "../components/ServiceTag";
 import WorkTag from "../components/WorkTag";
 import { HomeProps } from "../interfaces/ReferenceProps";
+import Lottie from "lottie-react";
+import wip from "../assets/wip.json";
 
 const Home: React.FC<HomeProps> = ({
   homeRef,
@@ -217,10 +219,20 @@ const Home: React.FC<HomeProps> = ({
       {/* Projects */}
       <div
         ref={projectsRef}
-        className="flex flex-row w-full bg-beige p-5 lg:py-24 lg:px-52 lg:space-x-10"
+        className="flex flex-col w-full bg-beige p-5 lg:py-24 lg:px-52 space-y-4 lg:space-y-10 lg:space-x-10"
       >
         <div className="text-black text-xl lg:text-3xl gideon">
           Featured Works
+        </div>
+        <div className="flex flex-col items-center justify-center lg:space-y-10 w-full">
+          <Lottie
+            animationData={wip}
+            loop={true}
+            className="w-36 h-36 lg:w-56 lg:h-56"
+          />
+          <span className="text-black text-sm lg:text-3xl poppins">
+            Working on something awesome here!
+          </span>
         </div>
       </div>
     </div>
