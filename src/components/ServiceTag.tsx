@@ -9,7 +9,7 @@ const ServiceTag: React.FC<ServiceProps> = ({
 }) => {
   return (
     <div className="flex flex-col w-full space-y-4">
-      <div className="flex flex-col lg:flex-row space-y-2 lg:space-x-4 lg:items-center">
+      <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 lg:items-center">
         <div className="flex flex-row w-full lg:w-1/2 items-center space-x-4">
           <div className="h-10 w-10 lg:h-14 lg:w-14 rounded-2xl bg-beige">
             <span className="flex items-center justify-center text-black w-full h-full text-base lg:text-3xl">
