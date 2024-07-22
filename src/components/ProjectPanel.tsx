@@ -1,6 +1,5 @@
-import { ProjectProps } from "../interfaces/ProjectProps";
 import { MdArrowOutward } from "react-icons/md";
-import sample from "../assets/sample.jpg";
+import { ProjectProps } from "../interfaces/ProjectProps";
 
 const ProjectPanel: React.FC<ProjectProps> = ({
   icon,

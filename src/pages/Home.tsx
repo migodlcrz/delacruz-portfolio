@@ -1,27 +1,25 @@
-import Lottie from "lottie-react";
 import { CgWebsite } from "react-icons/cg";
 import { FaCloud, FaDatabase, FaJava, FaPython } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
 import { MdDownload } from "react-icons/md";
 import { SiCisco } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
+import expo1 from "../assets/expo/photo1.png";
+import expo2 from "../assets/expo/photo2.png";
+import gtrails1 from "../assets/globaltekrails/photo1.png";
+import gtrails2 from "../assets/globaltekrails/photo2.png";
+import learnifyad1 from "../assets/learnify-admin/photo1.png";
+import learnifyad2 from "../assets/learnify-admin/photo2.png";
+import learnify1 from "../assets/learnify/photo1.png";
+import learnify2 from "../assets/learnify/photo2.png";
 import profile from "../assets/profile-cool.jpg";
-import wip from "../assets/wip.json";
 import CertificationTag from "../components/CertificationTag";
 import EducationTag from "../components/EducationTag";
 import InfoTag from "../components/InfoTag";
+import ProjectPanel from "../components/ProjectPanel";
 import ServiceTag from "../components/ServiceTag";
 import WorkTag from "../components/WorkTag";
 import { HomeProps } from "../interfaces/ReferenceProps";
-import ProjectPanel from "../components/ProjectPanel";
-import gtrails1 from "../assets/globaltekrails/photo1.png";
-import gtrails2 from "../assets/globaltekrails/photo2.png";
-import learnify1 from "../assets/learnify/photo1.png";
-import learnify2 from "../assets/learnify/photo2.png";
-import learnifyad1 from "../assets/learnify-admin/photo1.png";
-import learnifyad2 from "../assets/learnify-admin/photo2.png";
-import expo1 from "../assets/expo/photo1.png";
-import expo2 from "../assets/expo/photo2.png";
 
 const Home: React.FC<HomeProps> = ({
   homeRef,
