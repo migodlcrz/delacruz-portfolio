@@ -13,6 +13,15 @@ import InfoTag from "../components/InfoTag";
 import ServiceTag from "../components/ServiceTag";
 import WorkTag from "../components/WorkTag";
 import { HomeProps } from "../interfaces/ReferenceProps";
+import ProjectPanel from "../components/ProjectPanel";
+import gtrails1 from "../assets/globaltekrails/photo1.png";
+import gtrails2 from "../assets/globaltekrails/photo2.png";
+import learnify1 from "../assets/learnify/photo1.png";
+import learnify2 from "../assets/learnify/photo2.png";
+import learnifyad1 from "../assets/learnify-admin/photo1.png";
+import learnifyad2 from "../assets/learnify-admin/photo2.png";
+import expo1 from "../assets/expo/photo1.png";
+import expo2 from "../assets/expo/photo2.png";
 
 const Home: React.FC<HomeProps> = ({
   homeRef,
@@ -25,13 +34,13 @@ const Home: React.FC<HomeProps> = ({
       {/* Home */}
       <div className="bg-white p-8 lg:py-24 lg:px-52">
         <div className="flex flex-col items-start lg:items-start lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
-          <div className="flex flex-row lg:flex-col items-center lg:items-start lg:w-1/2 space-x-4 lg:space-x-0 lg:space-y-10">
+          <div className="flex flex-row lg:flex-col items-center justify-center lg:items-start lg:w-1/2 space-x-4 lg:space-x-0 lg:space-y-10">
             <img
               src={profile}
               alt=""
               className="h-10 w-10 lg:h-44 lg:w-44 rounded-3xl object-cover"
             />
-            <span className="text-black poppins text-base lg:text-6xl">
+            <span className="text-black poppins text-xl lg:text-6xl">
               Hello! I'm Lorenzo Miguel <br className="hidden lg:block" />
               Dela Cruz
             </span>
@@ -40,7 +49,7 @@ const Home: React.FC<HomeProps> = ({
             <span className="text-black gideon text-3xl lg:text-6xl">
               An aspiring Software Engineer based in Manila, Philippines
             </span>
-            <span className="text-gray-600 poppins text-base lg:text-xl">
+            <span className="text-black poppins text-base lg:text-xl">
               Passionate about creating robust backend systems, APIs, cloud
               engineering, and related technologies.
             </span>
@@ -103,7 +112,7 @@ const Home: React.FC<HomeProps> = ({
               build impactful software solutions."
           />
         </div>
-        <div className="flex flex-col lg:flex-row w-full space-y-4 lg:space-x-10">
+        <div className="flex flex-col lg:flex-row w-full space-y-4 lg:space-y-0 lg:space-x-10">
           <div className="flex flex-col w-full lg:w-1/2 space-y-4">
             <span className="text-black gideon text-xl lg:text-3xl">
               Work Experiences
@@ -219,20 +228,83 @@ const Home: React.FC<HomeProps> = ({
       {/* Projects */}
       <div
         ref={projectsRef}
-        className="flex flex-col w-full bg-beige p-8 lg:py-24 lg:px-52 space-y-4 lg:space-y-10 lg:space-x-10"
+        className="flex flex-col w-full bg-beige p-8 lg:py-24 lg:px-52 space-y-4 lg:space-y-10 "
       >
         <div className="text-black text-xl lg:text-3xl gideon">
-          Featured Works
+          Featured Personal Projects
         </div>
-        <div className="flex flex-col items-center justify-center lg:space-y-10 w-full">
-          <Lottie
-            animationData={wip}
-            loop={true}
-            className="w-36 h-36 lg:w-56 lg:h-56"
+        <div className="flex flex-col items-center justify-center space-y-4 lg:space-y-10 w-full">
+          <ProjectPanel
+            icon={undefined}
+            title={"CS Expo 2023 Website"}
+            description={
+              "A website developed for the school expo, showcasing various thesis projects by students. This full stack project includes a custom database and API endpoints."
+            }
+            tools={"Typescript, Express, MongoDB"}
+            photo1={expo1}
+            photo2={expo2}
+            link={"https://cs-expo-2023.vercel.app/"}
           />
-          <span className="text-black text-sm lg:text-3xl poppins">
-            Working on something awesome here!
-          </span>
+          <div className=" w-full border-b-[0.5px] border-gray-300" />
+          <ProjectPanel
+            icon={undefined}
+            title={"LMS Learnify: Admin"}
+            description={
+              "The administration side of a Learning Management System (LMS), built using MERN stack with features such as Google Auth, Stripe.js integration, and media encoding for posting videos, images, and files. This full stack application includes a custom database and API endpoints."
+            }
+            tools={"Typescript, Express, MongoDB"}
+            photo1={learnifyad1}
+            photo2={learnifyad2}
+            link={"https://lms-admin-82v0.onrender.com"}
+          />
+          <div className=" w-full border-b-[0.5px] border-gray-300" />
+          <ProjectPanel
+            icon={undefined}
+            title={"LMS Learnify"}
+            description={
+              "The student side of a Learning Management System (LMS), mirroring the administrative functionalities but tailored for student use. This full stack application includes a custom database and API endpoints."
+            }
+            tools={"Typescript, Express, MongoDB"}
+            photo1={learnify1}
+            photo2={learnify2}
+            link={"https://learnify-xv2j.onrender.com"}
+          />
+          <div className=" w-full border-b-[0.5px] border-gray-300" />
+          <ProjectPanel
+            icon={undefined}
+            title={"GlobaltekRails"}
+            description={
+              "An administration website for Metro Rail Transit (MRT) to manage rail transit operations, including CRUD functionalities for stations and user cards. This full stack application includes a custom database and API endpoints."
+            }
+            tools={"Typescript, Express, MongoDB"}
+            photo1={gtrails1}
+            photo2={gtrails2}
+            link={"https://globaltekrails.onrender.com"}
+          />
+          <div className=" w-full border-b-[0.5px] border-gray-300" />
+          <ProjectPanel
+            icon={undefined}
+            title={"GlobaltekRails: Mobile"}
+            description={
+              "A user-side mobile application for Metro Rail Transit (MRT) developed using React Native, allowing users to manage their balances. This full stack application includes a custom database and API endpoints."
+            }
+            tools={"Typescript, Express, MongoDB"}
+            photo1={""}
+            photo2={""}
+            link={""}
+          />
+          <div className=" w-full border-b-[0.5px] border-gray-300" />
+          <ProjectPanel
+            icon={undefined}
+            title={"GoGreen: Image Processing Thesis"}
+            description={
+              "A thesis project integrating YOLOv5 for image processing and a recommendation system to suggest recipes based on detected ingredients. This comprehensive full stack application includes a custom database and API endpoints."
+            }
+            tools={"Typescript, Express, MongoDB"}
+            photo1={""}
+            photo2={""}
+            link={""}
+          />
         </div>
       </div>
     </div>
