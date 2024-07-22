@@ -19,7 +19,7 @@ const CertificationTag: React.FC<CertificationProps> = ({
           {title} issued by
           <span className="font-bold"> {issuedBy}</span>
         </span>
-        <span className="text-gray-600 text-xs lg:text-sm poppins">
+        <span className="text-black text-xs lg:text-sm poppins">
           {dateIssued}
         </span>
       </div>

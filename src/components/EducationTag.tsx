@@ -15,7 +15,7 @@ const CertificationTag: React.FC<EducationProps> = ({
           {school}
         </span>
         <span className="text-black text-xs lg:text-sm">{course}</span>
-        <span className="text-gray-600 text-sm poppins">
+        <span className="text-black text-sm poppins">
           {startDate} - {endDate}
         </span>
       </div>
